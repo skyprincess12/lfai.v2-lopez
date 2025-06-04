@@ -14,9 +14,14 @@ st.subheader("Smart Weekly LF Prediction Assistant for Sugar Operations")
 st.caption("I Predict. YOU Decide.")
 
 # --- Load Models ---
-ridge = joblib.load("models/ridge_model.pkl")
-scaler = joblib.load("models/scaler.pkl")
-lgbm = lgb.Booster(model_file="models/lgb_model.txt")
+@st.cache_resource
+def load_models():
+    ridge_model = joblib.load("models/ridge_model.pkl")
+    scaler_model = joblib.load("models/scaler.pkl")
+    lgbm_model = lgb.Booster(model_file="models/lgb_model.txt")
+    return ridge_model, scaler_model, lgbm_model
+
+ridge, scaler, lgbm = load_models()
 
 feature_cols = ['pol_juice', 'brix_juice', 'purity_juice', 'trs', 'sugar_due',
                 'present_stock', 'disruption_time', 'fiber_cane', 'actual_sugar',
