@@ -1,7 +1,8 @@
 [theme]
 base = "dark"
-primaryColor = "#00ccff"         # Light blue for buttons, sliders, highlights
-backgroundColor = "#121212"      # Charcoal-dark background
-secondaryBackgroundColor = "#1e1e1e"  # Slightly lighter charcoal for panels
-textColor = "#e0f7e9"            # Very light greenish text
-font = "sans serif"              # Clean, readable font
+primaryColor = "#00e676"              # Vibrant green for buttons, highlights
+backgroundColor = "#121212"           # Charcoal background
+secondaryBackgroundColor = "#1e1e1e"  # Slightly lighter charcoal for sidebars/panels
+textColor = "#e0f2f1"                 # Pale teal-white for clarity
+font = "sans serif"
+
